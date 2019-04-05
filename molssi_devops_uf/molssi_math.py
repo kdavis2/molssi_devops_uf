@@ -5,7 +5,8 @@ A sample repository for MolSSI Workshop
 Some math functions
 """
 
-def mean(num_list): 
+
+def mean(num_list):
     """
     Calculate the mean/average of a list of numbers. 
 
@@ -20,11 +21,10 @@ def mean(num_list):
         The mean of the list
 
     """
-    
-    total = sum(num_list)
-    mean_list = total/len(num_list)
-    return mean_list
 
+    total = sum(num_list)
+    mean_list = total / len(num_list)
+    return mean_list
 
 
 def canvas(with_attribution=True):
