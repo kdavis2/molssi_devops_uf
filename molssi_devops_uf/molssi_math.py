@@ -21,9 +21,26 @@ def mean(num_list):
         The mean of the list
 
     """
+    #Check that input is type list
+    if not isinstance(num_list,  list):
+        raise TypeError('Invalid input %s - must be type list' %(num_list))
 
-    total = sum(num_list)
-    mean_list = total / len(num_list)
+
+    #Check that list is not empty
+    if len(num_list) == 0:
+        raise ValueError('Input is an empty list!')
+   
+    #Check that list does not contain mixed variable types (already has error message)
+    
+
+
+    try:
+        total = sum(num_list)
+        mean_list = total / len(num_list)
+    except TypeError:
+        raise TypeError('Cannot calculate mean of list - all list elements must be numeric')
+
+
     return mean_list
 
 
